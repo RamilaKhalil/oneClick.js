@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Blush Bash</div>
+      <i class="fas fa-bars menu-icon"></i>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./discount-offers.html">Discount Offers</a></li>
+          <div class="but">
+            <li>
+              <a href="./contact.html">
+                <h5>
+                  Contact us<i
+                    id="arrow"
+                    class="fa-solid fa-arrow-right-long"
+                  ></i>
+                </h5>
+                <div class="green"></div>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <a href="./cart.html"
+        ><div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">0</span>
+        </div>
+      </a>
+    </header>
+    <section class="contact-us">
+      <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Please fill out the form below.</p>
+        <form class="contact-form" action="#" method="post">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        // Select the menu icon and navigation links
+        const menuIcon = document.querySelector('.menu-icon');
+      const navLinks = document.querySelector('.nav-links');
+    
+      // Add click event listener to toggle the 'active' class on the menu icon
+      menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    
+      // Close the menu if the user clicks outside of the navigation menu
+      document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+          navLinks.classList.remove('active');
+        }
+      });
+    </script>
+  </body>
+</html>

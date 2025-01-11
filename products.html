@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Blush Bash</title>
+    <link rel="stylesheet" href="products.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="notification-container" class="notification-container"></div>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">Blush Bash</div>
+      <i class="fas fa-bars menu-icon"></i>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./discount-offers.html">Discount Offers</a></li>
+          <div class="but">
+            <li>
+              <a href="./contact.html">
+                <h5>
+                  Contact us<i
+                    id="arrow"
+                    class="fa-solid fa-arrow-right-long"
+                  ></i>
+                </h5>
+                <div class="green"></div>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <a href="./cart.html">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge">0</span>
+        </div>
+      </a>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <h2>Filter Products</h2>
+      <div class="filters">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="facewash">Facewash</button>
+        <button class="filter-btn" data-category="serum">Serum</button>
+        <button class="filter-btn" data-category="cream">Cream</button>
+        <button class="filter-btn" data-category="toner">Toner</button>
+        <button class="filter-btn" data-category="bundle-pack">
+          Bundle Pack
+        </button>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+      <div class="product-card" data-category="facewash">
+        <img src="assests/images/soap-864951_1280.jpg" alt="Facewash" />
+        <h3>Refreshing Facewash</h3>
+        <p>₹499</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="serum">
+        <img
+          src="assests/images/pexels-polina-kovaleva-8101525.jpg"
+          alt="Serum"
+        />
+        <h3>Glow Serum</h3>
+        <p>₹599</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="toner">
+        <img
+          src="assests/images/free-photo-of-transformative-makeup-for-the-bold-and-beautiful.jpeg"
+          alt="toner"
+        />
+        <h3>Glow Toner</h3>
+        <p>₹589</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="bundle-pack">
+        <img
+          src="assests/images/pexels-elena-druzhinina-54874780-7818170.jpg"
+          alt="bundle-pack"
+        />
+        <h3>Bundle Pack</h3>
+        <p>₹1799</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="facewash">
+        <img src="assests/images/soap-864951_1280.jpg" alt="FaceWash" />
+        <h3>Glow FaceWash</h3>
+        <p>₹599</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="serum">
+        <img
+          src="assests/images/pexels-polina-kovaleva-8101525.jpg"
+          alt="Serum"
+        />
+        <h3>Acne Serum</h3>
+        <p>₹999</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="serum">
+        <img
+          src="assests/images/pexels-polina-kovaleva-8101525.jpg"
+          alt="Serum"
+        />
+        <h3>Glow Serum</h3>
+        <p>₹799</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="cream">
+        <img
+          src="assests/images/pexels-taffy-buoniconti-1080066-6815658.jpg"
+          alt="Cream"
+        />
+        <h3>Glow Cream</h3>
+        <p>₹599</p>
+        <div class="quantity-controls">
+          <button class="decrement">-</button>
+          <input type="text" value="0" class="quantity" />
+          <button class="increment">+</button>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <!-- Add more product cards for other categories -->
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Discount Offers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@blushbash.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+          <p>Address: 123 Beauty Lane, Glow City</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Blush Bash. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      // Select the menu icon and navigation links
+      const menuIcon = document.querySelector('.menu-icon');
+      const navLinks = document.querySelector('.nav-links');
+    
+      // Add click event listener to toggle the 'active' class on the menu icon
+      menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    
+      // Close the menu if the user clicks outside of the navigation menu
+      document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+          navLinks.classList.remove('active');
+        }
+      });
+    
+      document.addEventListener("DOMContentLoaded", () => {
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  
+    addToCartButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const productCard = button.closest(".product-card");
+        const productName = productCard.querySelector("h3").textContent;
+        const productPrice = parseFloat(productCard.querySelector("p").textContent.replace("₹", ""));
+        const productImage = productCard.querySelector("img").src;
+        const quantity = parseInt(productCard.querySelector(".quantity").value);
+  
+        if (quantity > 0) {
+          const cartItem = {
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: quantity,
+          };
+  
+          // Get existing cart from localStorage or initialize an empty array
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+          // Check if the item is already in the cart
+          const existingItemIndex = cart.findIndex(item => item.name === cartItem.name);
+          if (existingItemIndex > -1) {
+            // Update quantity if item exists
+            cart[existingItemIndex].quantity += cartItem.quantity;
+          } else {
+            // Add new item to cart
+            cart.push(cartItem);
+          }
+  
+          // Save updated cart to localStorage
+          localStorage.setItem("cart", JSON.stringify(cart));
+          const showNotification = (message) => {
+  const notificationContainer = document.getElementById("notification-container");
+
+  // Create a notification element
+  const notification = document.createElement("div");
+  notification.className = "notification";
+  notification.textContent = message;
+
+  // Append the notification to the container
+  notificationContainer.appendChild(notification);
+
+  // Add a class to show the notification
+  setTimeout(() => {
+    notification.classList.add("show");
+  }, 10);
+
+  // Remove the notification after 3 seconds
+  setTimeout(() => {
+    notification.classList.remove("show");
+    setTimeout(() => notification.remove(), 300); // Ensure it's removed after fade-out
+  }, 3000);
+};
+
+
+
+          // Alert the user
+          showNotification(`${cartItem.name} added to cart!`);
+  
+          // Update cart quantity in navbar
+          updateCartQuantity();
+        } else {
+          showNotification("Please select a quantity greater than 0.");
+        }
+      });
+    });
+  
+    // Update cart quantity in the navbar
+    const updateCartQuantity = () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+      const cartIcon = document.querySelector("#cart-icon"); // Assuming you have a cart icon in navbar
+      if (cartIcon) {
+        cartIcon.textContent = cartQuantity > 0 ? cartQuantity : "";
+      }
+    };
+    updateCartQuantity();
+
+  });
+  
+    </script>
+  </body>
+</html>

@@ -1,0 +1,725 @@
+/* Reset */
+@font-face {
+    font-family: cooper;
+    src: url(./CooperLtBTWXXLight.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "cooper";
+  
+
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    padding: 1rem 2rem;
+  }
+ .navbar .menu-icon{
+    display: none;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.9rem;
+    padding-top: 5px;
+  }
+  
+  .navbar .nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .nav-links a:hover {
+    color: #00EB8F;
+  }
+  
+  
+ .but  {
+       padding: 5px 17px ;
+       margin-left: 6vw;
+       border-radius: 50px ;
+       position: relative;
+       overflow: hidden;
+       border: 1px solid #000;
+  }
+  .but .green{
+    width: 100% ;
+    height:100%  ;
+    top: 0;
+    left:-100% ;
+    position: absolute;
+    background-color: #00EB8F;
+    transition: left 0.3s ease-in-out;
+  }
+  .but:hover .green{
+    left: 0;
+  }
+  .but h5{
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+  }
+  #arrow{
+       padding-left: 5px;
+  }
+  .cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #00EB8F;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50%;
+  }
+  #page1{
+    margin-top: 20vh;
+    width: 100%;
+  }
+  #page1 h1 {
+    font-family: "cooper";
+    width: 60%;
+    font-weight: 100;
+    font-size: 5.4vw;
+    z-index: 99;
+    text-transform: capitalize;
+    position: relative;
+    margin-left: 10vw ;
+    text-align: center;
+}
+#page1 h1::after {
+    content: "";
+    position: absolute;
+    width: 31%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    bottom: -9%;
+    background-size: cover;
+    left: 35%;
+}
+#page1 #img1 {
+    position: absolute;
+    left: 6%;
+    top: 30%;
+    height: 380px;
+   
+}
+
+#page1 #img2 {
+    position: absolute;
+    right: 27%;
+    top: 19%;
+    height: 210px;
+}
+
+#page1 #img3 {
+    position: absolute;
+    right: 10%;
+    bottom: 0%;
+    height: 220px;
+}
+
+.trans img { 
+    transition: margin-top 0.3s ease-in-out;
+}
+.trans img:hover { 
+    margin-top: -10px;
+}
+.page2{
+    height: 70vh;
+    z-index: -8;
+    background-color: #00EB8F;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 8vh;
+
+}
+
+.page2 h4{
+    padding-top: 20vh ;
+    font-size: 1.2rem;
+    margin-left: 35vw;
+}
+
+.page2 p{
+    padding-top: 4vh ;
+    font-size: 0.9rem;
+    margin-left: 37vw;
+    width: 40%;
+}
+#about-us{
+    background-color: #00EB8F;
+    display: flex;
+    margin-left: 60vw;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin-bottom: 4vh;
+
+}
+#about-us h3{
+    font-size: 1.3rem ;
+    margin-left: 2vw;
+    font-weight: 500;
+}
+#greendiv {
+    height: 40px;
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 10PX;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+/* Bestseller Section */
+.bestseller {
+  height: 100vh;
+  text-align: center;
+  background-color: #000;
+
+
+}
+
+.bestseller h2 {
+  font-size: 2rem;
+  padding: 1.5rem;
+  color:#fff;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  display: flex; 
+  flex-direction: column; 
+  border-radius: 10px  54px ;
+  width: 278px;
+  overflow: hidden; 
+  background-color: #fff;
+  height: 70vh;
+}
+
+.card img {
+  padding: 15px 15px;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px 54px;
+  margin-bottom: 1rem;
+}
+.card .pr{
+  display: flex;
+  justify-content: center;
+  gap: 8vw;
+  
+}
+.card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+
+}
+.quantity-controls .br{
+  display: flex;
+}
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.quantity-controls button {
+  background-color: #00EB8F;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quantity-controls input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.add-to-cart {
+  background-color: #00EB8F;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #009f6b;
+}
+/* Bundle Pack Section */
+.bundle-pack {
+  height: 100vh;
+  text-align: center;
+}
+.bundle-pack h2{
+  font-size: 2rem;
+  padding-top: 12vh;
+  color:#000;
+  font-family: "cooper";
+}
+
+.bundle-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.bundle-card {
+  display: flex; 
+  flex-direction: column; 
+  border-radius: 10px  54px ;
+  width: 278px;
+  overflow: hidden; 
+  background-color: #fff;
+  height: 70vh;
+}
+
+.bundle-card img {
+  padding: 15px 15px;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px 54px;
+  margin-bottom: 1rem;
+}
+
+.bundle-card h3 {
+  font-size: 1.2rem;
+}
+
+.bundle-card p {
+  color: #00eb8f;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.bundle-card .buy-now {
+  padding: 0.5rem 1rem;
+  background-color: #00eb8f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bundle-card .buy-now:hover{
+  background-color:#29be8c;
+}
+
+/* Our Brand Section */
+.our-brand {
+  height: 50vh;
+  text-align: center;
+  margin: 3rem 0;
+  padding-top: 12vh;
+  /*background-color: #00eb8f;*/
+  
+}
+.our-brand p{
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 6vh;
+  font-family: "cooper";
+  color: #000;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 6vh;
+  flex-wrap: wrap;
+ 
+}
+
+.brand-logos img {
+  width: 100px;
+  height:auto;
+}
+.brand-logos img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  
+}
+.review-section {
+  width: 100%;
+  padding: 10px;
+  background-color: #00EB8F;
+}
+
+.review-grid {
+  display: flex;
+}
+.review-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.review-card h3 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.review-card .stars {
+  color: #ffd700;
+  margin: 8px 0;
+}
+
+.review-card p {
+  font-size: 1rem;
+  color: #555;
+}
+/* Footer Styles */
+.footer {
+  background-color: #00EB8F;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: "cooper";
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3, .footer h4 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.footer p, .footer ul, .footer a {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #1f8960;
+}
+
+/* Social Icons */
+.footer-social .social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #1f8960;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    padding: 1rem;
+    text-align: center;
+  }
+
+ 
+
+  .navbar .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 30vw;
+    margin-bottom: 1vh;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links a {
+    font-size: 0.9rem;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 2rem;
+    display: none;
+    position: absolute;
+    top: 9%;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: table-column;/* Show when active */
+    gap: 2rem;
+  }
+
+  .but {
+    padding: 4px 12px;
+    margin: 1rem auto;
+  }
+
+  .but h5 {
+    font-size: 0.9rem;
+  }
+
+  #page1 {
+    margin-top: 10vh;
+  }
+
+  #page1 h1 {
+    font-size: 8vw;
+    padding-bottom: 2vh;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #page1 #img1,
+  #page1 #img2,
+  #page1 #img3 {
+    height: 150px;
+    width: auto;
+    position: relative;
+    margin: 1rem auto;
+  }
+  #page1 #img1{
+    height: 250px;
+    margin-left: 40vw;
+    margin-top: -15vh;
+  }
+  #page1 #img2{
+    margin-top: -34vh;
+    margin-right :0vw;
+  }
+  #page1 #img3{
+    margin-top: -2vh;
+    margin-left: 20vw;
+  }
+  .page2 {
+    height: auto;
+    padding: 2rem 1rem;
+    flex-direction: column;
+    margin-top: -12vh;
+  }
+  .page2 h4 {
+    font-size: 1.5rem;
+    margin-top: -10vh;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .page2 p {
+    font-size: 0.9rem;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #about-us {
+    flex-direction: row;
+    margin: 1rem  auto;
+  
+   
+  }
+
+  #about-us h3 {
+    font-size: 1.2rem;
+    margin-left: 5vw;
+   padding-right: 2vw;
+    text-align: center;
+  }
+
+  #greendiv {
+    width: 120px;
+    height: 60px;
+    margin:  auto;
+  
+  }
+
+  .bestseller {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .bestseller h2 {
+    font-size: 2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .card img {
+    height: 250px
+  }
+
+  .bundle-pack {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .bundle-pack h2 {
+    font-size: 1.5rem;
+    margin-top: -2vh;
+
+  }
+
+  .bundle-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bundle-card {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .our-brand {
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .our-brand p {
+    font-size: 1.3rem;
+    margin-top: -8vh;
+  }
+
+  .brand-logos {
+    flex-direction: row;
+    grid-template-rows:  2fr 2fr 2fr 2fr;
+   gap:3rem;
+  }
+
+  .brand-logos img {
+    width: 100px;
+  }
+
+  .review-section {
+    padding: 1rem;
+  }
+
+  .review-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 1rem;
+  }
+
+  .footer p,
+  .footer ul,
+  .footer a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Blush Bash</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+   <!-- Navbar -->
+   <header class="navbar">
+    <div class="logo">Blush Bash</div>
+    <i class="fas fa-bars menu-icon"></i>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <li><a href="./discount-offers.html">Discount Offers</a></li>
+        <div class="but">
+          <li>
+            <a href="./contact.html">
+              <h5>
+                Contact us<i
+                  id="arrow"
+                  class="fa-solid fa-arrow-right-long"
+                ></i>
+              </h5>
+              <div class="green"></div>
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <a href="./cart.html">
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge">0</span>
+      </div>
+    </a>
+  </header>
+  <main class="cart-container">
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-items">
+      <!-- Example of a cart item -->
+      <div class="cart-item">
+        <div class="item-details">
+          <h3 class="item-name">Product Name</h3>
+          <p class="item-price">₹500</p>
+          <div class="item-quantity">
+            <button class="quantity-btn decrease">-</button>
+            <input type="number" value="1" min="1" class="quantity-input" />
+            <button class="quantity-btn increase">+</button>
+          </div>
+        </div>
+        <button class="remove-item">Remove</button>
+      </div>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <p>Total Items: <span id="total-items">0</span></p>
+      <p>Total Amount: <span id="cart-total">0</span></p>
+      <button id="checkout-button">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <script src="cart.js"></script>
+  <script>
+      // Select the menu icon and navigation links
+      const menuIcon = document.querySelector('.menu-icon');
+      const navLinks = document.querySelector('.nav-links');
+    
+      // Add click event listener to toggle the 'active' class on the menu icon
+      menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    
+      // Close the menu if the user clicks outside of the navigation menu
+      document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+          navLinks.classList.remove('active');
+        }
+      });
+  </script>
+</body>
+</html>
