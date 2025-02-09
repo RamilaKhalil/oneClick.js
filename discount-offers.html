@@ -239,104 +239,116 @@
     </footer>
     <script src="script.js"></script>
     <script>
-      
       // Select the menu icon and navigation links
-      const menuIcon = document.querySelector('.menu-icon');
-      const navLinks = document.querySelector('.nav-links');
-    
+      const menuIcon = document.querySelector(".menu-icon");
+      const navLinks = document.querySelector(".nav-links");
+
       // Add click event listener to toggle the 'active' class on the menu icon
-      menuIcon.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+      menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
       });
-    
+
       // Close the menu if the user clicks outside of the navigation menu
-      document.addEventListener('click', (event) => {
-        if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
-          navLinks.classList.remove('active');
+      document.addEventListener("click", (event) => {
+        if (
+          !navLinks.contains(event.target) &&
+          !menuIcon.contains(event.target)
+        ) {
+          navLinks.classList.remove("active");
         }
       });
       document.addEventListener("DOMContentLoaded", () => {
-    const addToCartButtons = document.querySelectorAll(".add-to-cart");
-  
-    addToCartButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const productCard = button.closest(".product-card");
-        const productName = productCard.querySelector("h3").textContent;
-        const productPrice = parseFloat(productCard.querySelector("p").textContent.replace("₹", ""));
-        const productImage = productCard.querySelector("img").src;
-        const quantity = parseInt(productCard.querySelector(".quantity").value);
-  
-        if (quantity > 0) {
-          const cartItem = {
-            name: productName,
-            price: productPrice,
-            image: productImage,
-            quantity: quantity,
-          };
-  
-          // Get existing cart from localStorage or initialize an empty array
-          let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-          // Check if the item is already in the cart
-          const existingItemIndex = cart.findIndex(item => item.name === cartItem.name);
-          if (existingItemIndex > -1) {
-            // Update quantity if item exists
-            cart[existingItemIndex].quantity += cartItem.quantity;
-          } else {
-            // Add new item to cart
-            cart.push(cartItem);
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const productCard = button.closest(".product-card");
+            const productName = productCard.querySelector("h3").textContent;
+            const productPrice = parseFloat(
+              productCard
+                .querySelector(".discount-price")
+                .textContent.replace("₹", "")
+            );
+            const productImage = productCard.querySelector("img").src;
+            const quantity = parseInt(
+              productCard.querySelector(".quantity").value
+            );
+
+            if (quantity > 0) {
+              const cartItem = {
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: quantity,
+              };
+
+              // Get existing cart from localStorage or initialize an empty array
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+              // Check if the item is already in the cart
+              const existingItemIndex = cart.findIndex(
+                (item) => item.name === cartItem.name
+              );
+              if (existingItemIndex > -1) {
+                // Update quantity if item exists
+                cart[existingItemIndex].quantity += cartItem.quantity;
+              } else {
+                // Add new item to cart
+                cart.push(cartItem);
+              }
+
+              // Save updated cart to localStorage
+              localStorage.setItem("cart", JSON.stringify(cart));
+              const showNotification = (message) => {
+                const notificationContainer = document.getElementById(
+                  "notification-container"
+                );
+
+                // Create a notification element
+                const notification = document.createElement("div");
+                notification.className = "notification";
+                notification.textContent = message;
+
+                // Append the notification to the container
+                notificationContainer.appendChild(notification);
+
+                // Add a class to show the notification
+                setTimeout(() => {
+                  notification.classList.add("show");
+                }, 10);
+
+                // Remove the notification after 3 seconds
+                setTimeout(() => {
+                  notification.classList.remove("show");
+                  setTimeout(() => notification.remove(), 300); // Ensure it's removed after fade-out
+                }, 3000);
+              };
+
+              // Alert the user
+              showNotification(`${cartItem.name} added to cart!`);
+
+              // Update cart quantity in navbar
+              updateCartQuantity();
+            } else {
+              showNotification("Please select a quantity greater than 0.");
+            }
+          });
+        });
+
+        // Update cart quantity in the navbar
+        const updateCartQuantity = () => {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const cartQuantity = cart.reduce(
+            (acc, item) => acc + item.quantity,
+            0
+          );
+          const cartIcon = document.querySelector("#cart-icon"); // Assuming you have a cart icon in navbar
+          if (cartIcon) {
+            cartIcon.textContent = cartQuantity > 0 ? cartQuantity : "";
           }
-  
-          // Save updated cart to localStorage
-          localStorage.setItem("cart", JSON.stringify(cart));
-          const showNotification = (message) => {
-  const notificationContainer = document.getElementById("notification-container");
-
-  // Create a notification element
-  const notification = document.createElement("div");
-  notification.className = "notification";
-  notification.textContent = message;
-
-  // Append the notification to the container
-  notificationContainer.appendChild(notification);
-
-  // Add a class to show the notification
-  setTimeout(() => {
-    notification.classList.add("show");
-  }, 10);
-
-  // Remove the notification after 3 seconds
-  setTimeout(() => {
-    notification.classList.remove("show");
-    setTimeout(() => notification.remove(), 300); // Ensure it's removed after fade-out
-  }, 3000);
-};
-
-
-
-          // Alert the user
-          showNotification(`${cartItem.name} added to cart!`);
-  
-          // Update cart quantity in navbar
-          updateCartQuantity();
-        } else {
-          showNotification("Please select a quantity greater than 0.");
-        }
+        };
+        updateCartQuantity();
       });
-    });
-  
-    // Update cart quantity in the navbar
-    const updateCartQuantity = () => {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const cartQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
-      const cartIcon = document.querySelector("#cart-icon"); // Assuming you have a cart icon in navbar
-      if (cartIcon) {
-        cartIcon.textContent = cartQuantity > 0 ? cartQuantity : "";
-      }
-    };
-    updateCartQuantity();
-
-  });
     </script>
     <!-- Add your JavaScript code here -->
   </body>

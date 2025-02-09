@@ -301,7 +301,7 @@ body {
   }
 
   .cart-item {
-    flex-direction: column;
+    flex-direction: flex;
     align-items: flex-start;
     padding: 10px;
   }
@@ -318,6 +318,7 @@ body {
 
   .item-price {
     font-size: 0.9rem;
+    
   }
 
   .item-quantity {
@@ -343,7 +344,7 @@ body {
 
   /* Remove the button on the right side */
   .remove-item {
-    display: none;
+    display: block;
   }
 
   /* Adjust cart summary */
